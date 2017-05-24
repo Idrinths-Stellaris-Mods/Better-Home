@@ -1,0 +1,22 @@
+namespace = idrinthstellarisbetterhome
+
+event = {
+    id = idrinthstellarisbetterhome.1
+    hide_window = yes
+    is_triggered_only = yes
+    immediate = {
+        every_country = {
+            limit = { exists = capital_scope }
+            capital_scope = {
+                solar_system = {
+                    every_system_planet = {
+                        add_modifier = {
+                            modifier = idrinthstellarisbetterhome_improved_home
+                            days = -1
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,7 @@
+pm_idrinthstellarisbetterhome_improved_home = {
+	spawn_chance = {
+		#None - From gamestart
+	}
+	
+	modifier = "idrinthstellarisbetterhome_improved_home"
+}
