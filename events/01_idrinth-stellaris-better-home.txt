@@ -20,3 +20,20 @@ event = {
         }
     }
 }
+event = {
+    id = idrinthstellarisbetterhome.2
+    hide_window = yes
+    is_triggered_only = yes
+    immediate = {
+        every_country = {
+            limit = { exists = capital_scope }
+            capital_scope = {
+                    add_modifier = {
+                        modifier = idrinthstellarisbetterhome_improved_home_planet
+                        days = -1
+                    }
+                }
+            }
+        }
+    }
+}
