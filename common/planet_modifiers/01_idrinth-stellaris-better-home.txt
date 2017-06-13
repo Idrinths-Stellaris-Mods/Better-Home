@@ -12,3 +12,17 @@ pm_idrinthstellarisbetterhome_improved_home_planet = {
 	
 	modifier = "idrinthstellarisbetterhome_improved_home_planet"
 }
+pm_idrinthstellarisbetterhome_improved_home_lost = {
+	spawn_chance = {
+		#None - From events
+	}
+	
+	modifier = "idrinthstellarisbetterhome_improved_home_lost"
+}
+idrinthstellarisbetterhome_improved_home_reconquered = {
+	spawn_chance = {
+		#None - From events
+	}
+	
+	modifier = "idrinthstellarisbetterhome_improved_home_reconquered"
+}
