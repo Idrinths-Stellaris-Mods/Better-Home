@@ -6,32 +6,65 @@ event = {
     is_triggered_only = yes
     immediate = {
         every_country = {
-            limit = { exists = capital_scope }
+            limit = { 
+                exists = capital_scope
+                NOT = {is_primitive}
+            }            
             capital_scope = {
-                solar_system = {
-                    every_system_planet = {
-                        add_modifier = {
-                            modifier = idrinthstellarisbetterhome_improved_home
-                            days = -1
-                        }
-                    }
-                }
+                planet_event = {id=idrinthstellarisbetterhome.3}
             }
         }
     }
 }
-event = {
+planet_event = {
     id = idrinthstellarisbetterhome.2
     hide_window = yes
-    is_triggered_only = yes
+    trigger = {
+        NOT={is_homeworld}
+        has_modifier=idrinthstellarisbetterhome_improved_home
+    }
     immediate = {
-        every_country = {
-            limit = { exists = capital_scope }
-            capital_scope = {
-                    add_modifier = {
-                        modifier = idrinthstellarisbetterhome_improved_home_planet
-                        days = -1
-                    }
+        remove_modifier = idrinthstellarisbetterhome_improved_home
+        solar_system = {
+            every_system_planet = {
+                remove_modifier = idrinthstellarisbetterhome_improved_home
+            }
+        }
+        if = {
+            limit = {has_modifier=idrinthstellarisbetterhome_improved_home_reconquered}
+            remove_modifier=idrinthstellarisbetterhome_improved_home_reconquered
+        }
+        add_modifier = {
+            modifier = idrinthstellarisbetterhome_improved_home_lost
+            days = 1800
+        }
+    }
+}
+planet_event = {
+    id = idrinthstellarisbetterhome.3
+    hide_window = yes
+    trigger = {
+        is_homeworld
+        NOT={has_modifier=idrinthstellarisbetterhome_improved_home}
+    }
+    immediate = {
+        add_modifier = {
+            modifier = idrinthstellarisbetterhome_improved_home
+            days = -1
+        }
+        add_modifier = {
+            modifier = idrinthstellarisbetterhome_improved_home_reconquered
+            days = 180
+        }
+        if = {
+            limit = {has_modifier=idrinthstellarisbetterhome_improved_home_lost}
+            remove_modifier=idrinthstellarisbetterhome_improved_home_lost
+        }
+        solar_system = {
+            every_system_planet = {
+                add_modifier = {
+                    modifier = idrinthstellarisbetterhome_improved_home
+                    days = -1
                 }
             }
         }
