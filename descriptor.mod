@@ -5,6 +5,8 @@ tags={
 	"Gameplay"
 	"Events"
 	"Planets"
+	"Deutsch"
+	"English"
 }
 picture="idrinth.jpg"
 supported_version="1.6.*"

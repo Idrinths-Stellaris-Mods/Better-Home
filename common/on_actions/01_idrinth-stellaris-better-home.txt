@@ -1,6 +1,5 @@
 on_game_start = {
 	events = {
 		idrinthstellarisbetterhome.1
-		idrinthstellarisbetterhome.2
 	}
 }

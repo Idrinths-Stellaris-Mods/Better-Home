@@ -1,0 +1,41 @@
+namespace = idrinthstellarisbetterhome
+
+planet_event = {
+    id = idrinthstellarisbetterhome.3
+    hide_window = yes
+    trigger = {
+        is_homeworld = yes
+        NOT = {
+            has_modifier = "idrinthstellarisbetterhome_improved_home_planet"
+        }
+    }
+    immediate = {
+        add_modifier = {
+            modifier = "idrinthstellarisbetterhome_improved_home_planet"
+            days = -1
+        }
+        add_modifier = {
+            modifier = "idrinthstellarisbetterhome_improved_home_reconquered"
+            days = 180
+        }
+        if = {
+            limit = {
+                has_modifier = "idrinthstellarisbetterhome_improved_home_lost"
+            }
+            remove_modifier = "idrinthstellarisbetterhome_improved_home_lost"
+        }
+        solar_system = {
+            every_system_planet = {
+                if = {
+                    limit = {
+                        planet_size > 0
+                    }
+                    add_modifier = {
+                        modifier = "idrinthstellarisbetterhome_improved_home"
+                        days = -1
+                    }
+                }
+            }
+        }
+    }
+}
