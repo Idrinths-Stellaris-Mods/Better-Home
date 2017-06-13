@@ -1,5 +1,9 @@
-﻿l_english:
+﻿l_german:
  pm_idrinthstellarisbetterhome_improved_home:0 "Heimatsystem"
  idrinthstellarisbetterhome_improved_home:0 "Heimatsystem"
  pm_idrinthstellarisbetterhome_improved_home_planet:0 "Heimatplanet"
  idrinthstellarisbetterhome_improved_home_planet:0 "Heimatplanet"
+ pm_idrinthstellarisbetterhome_improved_home_lost:0 "Verlorener Heimatplanet"
+ idrinthstellarisbetterhome_improved_home_lost:0 "Verlorener Heimatplanet"
+ pm_idrinthstellarisbetterhome_improved_home_reconquered:0 "Befreiter Heimatplanet"
+ idrinthstellarisbetterhome_improved_home_reconquered:0 "Befreiter Heimatplanet"
