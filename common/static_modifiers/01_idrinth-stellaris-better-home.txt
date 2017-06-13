@@ -15,7 +15,7 @@ idrinthstellarisbetterhome_improved_home = {
         edict_cost_mult = 0.05
 
 	icon = "gfx/interface/icons/planet_modifiers/capital.dds"
-	icon_frame = 1
+	icon_frame = 2
 }
 idrinthstellarisbetterhome_improved_home_planet = {
         #defense
@@ -45,4 +45,38 @@ idrinthstellarisbetterhome_improved_home_planet = {
 
 	icon = "gfx/interface/icons/planet_modifiers/capital.dds"
 	icon_frame = 1
+}
+idrinthstellarisbetterhome_improved_home_lost = {
+        #defense
+	planet_fortification_strength = -0.1
+        pop_fortification_defense = -0.1
+        army_defense_morale_mult=-0.1
+        army_defense_damage_mult=-0.1
+        #population
+        planet_border_mult=-0.1
+        pop_happiness = -0.15
+        edict_cost_mult = 0.1
+	planet_unrest_add = 0.4
+	# building
+	planet_building_cost_mult = 0.1
+	planet_ship_build_speed_mult = -0.1
+	planet_army_build_speed_mult = -0.1
+
+	icon = "gfx/interface/icons/planet_modifiers/capital.dds"
+	icon_frame = 3
+}
+idrinthstellarisbetterhome_improved_home_reconquered = {
+        #defense
+        army_defense_morale_mult=0.1
+        army_defense_damage_mult=0.1
+        #population
+        pop_happiness = 0.05
+	planet_unrest_add = -0.1
+	# buildings
+	shipsize_orbital_station_build_cost_mult = -0.1
+	planet_resource_influence_add = 1
+	planet_resource_unity_add = 1
+
+	icon = "gfx/interface/icons/planet_modifiers/capital.dds"
+	icon_frame = 2
 }
